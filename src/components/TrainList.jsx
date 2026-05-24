@@ -14,8 +14,8 @@ function TrainList({ trains }) {
 
   return (
     <div className={styles.grid}>
-      {trains.map((train) => (
-        <TrainCard key={train.id} train={train} />
+      {trains.map((train, index) => (
+        <TrainCard key={train.id} train={train} index={index} />
       ))}
     </div>
   );

@@ -13,7 +13,7 @@ const formatDateTime = (dateString) => {
   return { date: dateFormatted, time: timeFormatted };
 };
 
-function TrainCard({ train }) {
+function TrainCard({ train, index }) {
   const departure = formatDateTime(train.departure);
   const arrival = formatDateTime(train.arrival);
 
@@ -25,7 +25,10 @@ function TrainCard({ train }) {
         : styles.seatsHigh;
 
   return (
-    <div className={styles.card}>
+    <div 
+      className={`${styles.card} animateFadeInUp`}
+      style={{ animationDelay: `${index * 0.05}s`, opacity: 0 }}
+    >
       <div className={styles.cardHeader}>
         <span className={styles.trainNumber}>🚆 {train.number}</span>
         <span className={styles.duration}>🕐 {train.duration}</span>
