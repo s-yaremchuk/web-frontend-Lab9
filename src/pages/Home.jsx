@@ -6,14 +6,21 @@ import styles from './Home.module.css';
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchDate, setSearchDate] = useState('');
 
   const filteredTrains = trains.filter((train) => {
     const query = searchQuery.toLowerCase();
-    return (
+    const matchesQuery = (
       train.from.toLowerCase().includes(query) ||
       train.to.toLowerCase().includes(query) ||
       train.number.toLowerCase().includes(query)
     );
+
+    if (!searchDate) return matchesQuery;
+
+    // Filter by departure date (YYYY-MM-DD)
+    const trainDate = train.departure.split('T')[0];
+    return matchesQuery && trainDate === searchDate;
   });
 
   return (
@@ -34,6 +41,8 @@ function Home() {
             <SearchBar
               value={searchQuery}
               onChange={setSearchQuery}
+              dateValue={searchDate}
+              onDateChange={setSearchDate}
               placeholder="Місто відправлення, прибуття або номер потяга..."
             />
           </div>

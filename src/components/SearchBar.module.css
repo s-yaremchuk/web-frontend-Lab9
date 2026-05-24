@@ -2,44 +2,104 @@
    SearchBar Component Styles
    ============================================ */
 
-.searchContainer {
+.searchBar {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  background: var(--color-card);
+  padding: 8px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.inputGroup,
+.dateGroup {
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
 }
 
-.searchIcon {
+.inputGroup {
+  flex: 2;
+}
+
+.dateGroup {
+  flex: 1;
+  min-width: 200px;
+}
+
+.searchIcon,
+.calendarIcon {
   position: absolute;
-  left: 18px;
-  font-size: 1.15rem;
+  left: 16px;
+  font-size: 1.1rem;
   z-index: 1;
   pointer-events: none;
+  opacity: 0.7;
 }
 
-.searchInput {
+.searchInput,
+.dateInput {
   width: 100%;
-  padding: 16px 20px 16px 50px;
+  padding: 14px 16px 14px 46px;
   font-size: 1rem;
   border: 2px solid #e0e4e8;
-  border-radius: var(--border-radius);
-  background: var(--color-card);
+  border-radius: calc(var(--border-radius) - 4px);
+  background: #fbfcfd;
   color: var(--color-text);
   transition: var(--transition);
   outline: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .searchInput::placeholder {
   color: var(--color-text-light);
-  font-weight: 400;
 }
 
-.searchInput:focus {
+.searchInput:focus,
+.dateInput:focus {
   border-color: var(--color-primary);
+  background: #ffffff;
   box-shadow: 0 0 0 4px rgba(0, 48, 135, 0.1);
 }
 
-.searchInput:hover:not(:focus) {
+.searchInput:hover:not(:focus),
+.dateInput:hover:not(:focus) {
   border-color: #c0c8d4;
+}
+
+.clearBtn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--color-text-light);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transition: var(--transition);
+}
+
+.clearBtn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-danger);
+}
+
+@media (max-width: 768px) {
+  .searchBar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+  
+  .inputGroup,
+  .dateGroup {
+    width: 100%;
+  }
 }
