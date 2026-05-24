@@ -1,0 +1,122 @@
+export const trains = [
+  {
+    id: 1,
+    number: '091К',
+    from: 'Київ',
+    to: 'Львів',
+    departure: '2026-05-25T08:15:00',
+    arrival: '2026-05-25T14:30:00',
+    duration: '6 год 15 хв',
+    types: ['Плацкарт', 'Купе', 'СВ'],
+    priceFrom: 350,
+    availableSeats: 45
+  },
+  {
+    id: 2,
+    number: '043Щ',
+    from: 'Київ',
+    to: 'Одеса',
+    departure: '2026-05-25T22:40:00',
+    arrival: '2026-05-26T06:15:00',
+    duration: '7 год 35 хв',
+    types: ['Плацкарт', 'Купе'],
+    priceFrom: 420,
+    availableSeats: 32
+  },
+  {
+    id: 3,
+    number: '012Ш',
+    from: 'Львів',
+    to: 'Харків',
+    departure: '2026-05-26T17:00:00',
+    arrival: '2026-05-27T07:30:00',
+    duration: '14 год 30 хв',
+    types: ['Плацкарт', 'Купе', 'СВ'],
+    priceFrom: 580,
+    availableSeats: 18
+  },
+  {
+    id: 4,
+    number: '075К',
+    from: 'Дніпро',
+    to: 'Київ',
+    departure: '2026-05-25T19:30:00',
+    arrival: '2026-05-26T02:45:00',
+    duration: '7 год 15 хв',
+    types: ['Купе', 'СВ'],
+    priceFrom: 490,
+    availableSeats: 22
+  },
+  {
+    id: 5,
+    number: '108П',
+    from: 'Запоріжжя',
+    to: 'Львів',
+    departure: '2026-05-26T15:20:00',
+    arrival: '2026-05-27T08:10:00',
+    duration: '16 год 50 хв',
+    types: ['Плацкарт', 'Купе'],
+    priceFrom: 620,
+    availableSeats: 37
+  },
+  {
+    id: 6,
+    number: '067Л',
+    from: 'Київ',
+    to: 'Запоріжжя',
+    departure: '2026-05-25T07:00:00',
+    arrival: '2026-05-25T13:25:00',
+    duration: '6 год 25 хв',
+    types: ['Плацкарт', 'Купе'],
+    priceFrom: 380,
+    availableSeats: 51
+  },
+  {
+    id: 7,
+    number: '023К',
+    from: 'Харків',
+    to: 'Одеса',
+    departure: '2026-05-26T20:15:00',
+    arrival: '2026-05-27T09:00:00',
+    duration: '12 год 45 хв',
+    types: ['Плацкарт', 'Купе', 'СВ'],
+    priceFrom: 530,
+    availableSeats: 14
+  },
+  {
+    id: 8,
+    number: '055Щ',
+    from: 'Одеса',
+    to: 'Київ',
+    departure: '2026-05-25T16:50:00',
+    arrival: '2026-05-26T00:30:00',
+    duration: '7 год 40 хв',
+    types: ['Купе', 'СВ'],
+    priceFrom: 450,
+    availableSeats: 28
+  },
+  {
+    id: 9,
+    number: '091П',
+    from: 'Львів',
+    to: 'Одеса',
+    departure: '2026-05-27T10:30:00',
+    arrival: '2026-05-27T23:45:00',
+    duration: '13 год 15 хв',
+    types: ['Плацкарт', 'Купе'],
+    priceFrom: 510,
+    availableSeats: 40
+  },
+  {
+    id: 10,
+    number: '033К',
+    from: 'Вінниця',
+    to: 'Харків',
+    departure: '2026-05-26T06:00:00',
+    arrival: '2026-05-26T17:30:00',
+    duration: '11 год 30 хв',
+    types: ['Плацкарт'],
+    priceFrom: 340,
+    availableSeats: 55
+  }
+];
