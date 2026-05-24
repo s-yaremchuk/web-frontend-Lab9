@@ -124,3 +124,32 @@
   font-size: 0.85rem;
   margin-top: auto;
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 32px 16px 40px;
+  }
+  
+  .logoIcon {
+    font-size: 2rem;
+  }
+  
+  .logoText {
+    font-size: 1.75rem;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .container {
+    padding: 0 16px 30px;
+  }
+  
+  .resultsInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+

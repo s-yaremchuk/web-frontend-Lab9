@@ -215,3 +215,18 @@
   background: rgba(220, 53, 69, 0.1);
   color: var(--color-danger);
 }
+
+@media (max-width: 480px) {
+  .time {
+    font-size: 1.25rem;
+  }
+  
+  .cardBody {
+    padding: 16px;
+  }
+  
+  .route {
+    gap: 8px;
+  }
+}
+
