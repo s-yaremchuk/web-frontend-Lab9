@@ -1,9 +1,8 @@
+import './App.css';
+import Home from './pages/Home';
+
 function App() {
-  return (
-    <div>
-      <h1>Укрзалізниця</h1>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
