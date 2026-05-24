@@ -1,3 +1,5 @@
+import styles from './TrainCard.module.css';
+
 const formatDateTime = (dateString) => {
   const date = new Date(dateString);
   const dateFormatted = new Intl.DateTimeFormat('uk-UA', {
@@ -17,53 +19,53 @@ function TrainCard({ train }) {
 
   const seatsClass =
     train.availableSeats <= 15
-      ? 'seatsLow'
+      ? styles.seatsLow
       : train.availableSeats <= 30
-        ? 'seatsMedium'
-        : 'seatsHigh';
+        ? styles.seatsMedium
+        : styles.seatsHigh;
 
   return (
-    <div className="card">
-      <div className="cardHeader">
-        <span className="trainNumber">🚆 {train.number}</span>
-        <span className="duration">🕐 {train.duration}</span>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <span className={styles.trainNumber}>🚆 {train.number}</span>
+        <span className={styles.duration}>🕐 {train.duration}</span>
       </div>
 
-      <div className="cardBody">
-        <div className="route">
-          <div className="routePoint">
-            <span className="time">{departure.time}</span>
-            <span className="city">{train.from}</span>
-            <span className="date">{departure.date}</span>
+      <div className={styles.cardBody}>
+        <div className={styles.route}>
+          <div className={styles.routePoint}>
+            <span className={styles.time}>{departure.time}</span>
+            <span className={styles.city}>{train.from}</span>
+            <span className={styles.date}>{departure.date}</span>
           </div>
-          <div className="routeArrow">
-            <span className="arrowLine"></span>
-            <span className="arrowIcon">→</span>
-            <span className="arrowLine"></span>
+          <div className={styles.routeArrow}>
+            <span className={styles.arrowLine}></span>
+            <span className={styles.arrowIcon}>→</span>
+            <span className={styles.arrowLine}></span>
           </div>
-          <div className="routePoint">
-            <span className="time">{arrival.time}</span>
-            <span className="city">{train.to}</span>
-            <span className="date">{arrival.date}</span>
+          <div className={styles.routePoint}>
+            <span className={styles.time}>{arrival.time}</span>
+            <span className={styles.city}>{train.to}</span>
+            <span className={styles.date}>{arrival.date}</span>
           </div>
         </div>
 
-        <div className="types">
+        <div className={styles.types}>
           {train.types.map((type) => (
-            <span key={type} className="badge">
+            <span key={type} className={styles.badge}>
               {type}
             </span>
           ))}
         </div>
 
-        <div className="cardFooter">
-          <div className="price">
-            <span className="priceLabel">від</span>
-            <span className="priceValue">₴ {train.priceFrom}</span>
+        <div className={styles.cardFooter}>
+          <div className={styles.price}>
+            <span className={styles.priceLabel}>від</span>
+            <span className={styles.priceValue}>₴ {train.priceFrom}</span>
           </div>
-          <div className={`seats ${seatsClass}`}>
-            <span className="seatsCount">{train.availableSeats}</span>
-            <span className="seatsLabel">місць</span>
+          <div className={`${styles.seats} ${seatsClass}`}>
+            <span className={styles.seatsCount}>{train.availableSeats}</span>
+            <span className={styles.seatsLabel}>місць</span>
           </div>
         </div>
       </div>
