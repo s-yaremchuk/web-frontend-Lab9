@@ -1,16 +1,126 @@
-/* Home page placeholder styles - will be enhanced in next commit */
+/* ============================================
+   Home Page & Header Styles
+   ============================================ */
+
 .page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--color-bg);
 }
 
+/* Header */
+.header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 50%, #001040 100%);
+  color: #ffffff;
+  padding: 48px 24px 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-primary-light), var(--color-accent));
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.logoIcon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.logoText {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  font-weight: 400;
+  margin-left: 4px;
+  letter-spacing: 0.3px;
+}
+
+/* Main Content */
 .main {
   flex: 1;
+  margin-top: -28px;
+  position: relative;
+  z-index: 2;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 24px 40px;
+}
+
+/* Search Section */
+.searchSection {
+  margin-bottom: 24px;
+}
+
+/* Results Info */
+.resultsInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 4px;
+}
+
+.resultsCount {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+
+.resultsCount strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Footer */
+.footer {
+  background: var(--color-primary-dark);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.85rem;
+  margin-top: auto;
 }
