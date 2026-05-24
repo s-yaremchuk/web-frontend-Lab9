@@ -1,10 +1,12 @@
+import styles from './SearchBar.module.css';
+
 function SearchBar({ value, onChange, placeholder }) {
   return (
-    <div className="searchContainer">
-      <span className="searchIcon">🔍</span>
+    <div className={styles.searchContainer}>
+      <span className={styles.searchIcon}>🔍</span>
       <input
         type="text"
-        className="searchInput"
+        className={styles.searchInput}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder || 'Пошук потягів...'}
