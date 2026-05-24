@@ -1,10 +1,11 @@
 import TrainCard from './TrainCard';
+import styles from './TrainList.module.css';
 
 function TrainList({ trains }) {
   if (!trains || trains.length === 0) {
     return (
-      <div className="emptyMessage">
-        <span className="emptyIcon">🔍</span>
+      <div className={styles.emptyMessage}>
+        <span className={styles.emptyIcon}>🔍</span>
         <h3>Потягів не знайдено</h3>
         <p>Спробуйте змінити параметри пошуку</p>
       </div>
@@ -12,7 +13,7 @@ function TrainList({ trains }) {
   }
 
   return (
-    <div className="grid">
+    <div className={styles.grid}>
       {trains.map((train) => (
         <TrainCard key={train.id} train={train} />
       ))}

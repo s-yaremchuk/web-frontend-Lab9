@@ -1,0 +1,37 @@
+/* ============================================
+   TrainList Component Styles
+   ============================================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  padding: 8px 0;
+}
+
+/* Empty State Message */
+.emptyMessage {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--color-card);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  grid-column: 1 / -1;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.emptyMessage h3 {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.emptyMessage p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
