@@ -1,16 +1,69 @@
-# React + Vite
+# Укрзалізниця — Пошук потягів та рейсів (Лабораторна робота №9)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-застосунок для пошуку та фільтрації рейсів потягів по всій Україні, виконаний у фірмовому стилі Укрзалізниці.
 
-Currently, two official plugins are available:
+## 🌟 Основна функціональність
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Відображення рейсів**: детальна інформація про кожен потяг (номер потяга, напрямок відправлення та прибуття, час та тривалість поїздки, доступні вагони, мінімальна ціна квитка).
+- **Інтерактивний пошук**: пошук потягів за містом відправлення, прибуття або номером потяга в реальному часі.
+- **Фільтрація за датою**: зручний календар для вибору конкретної дати поїздки.
+- **Адаптивний інтерфейс**: зручний перегляд на мобільних пристроях, планшетах та настільних комп'ютерах.
+- **Анімації та UX**: плавна поява карток, hover-ефекти для кнопок та карток, мікро-інтеракції.
 
-## React Compiler
+## 🛠 Технології
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 18
+- **Збірка**: Vite
+- **Стилізація**: Vanilla CSS (з використанням CSS CSS-модулів та CSS-змінних для кастомного темплейту Укрзалізниці)
+- **Шрифти**: Google Fonts (Inter)
 
-## Expanding the ESLint configuration
+## 📁 Структура проєкту
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+LB9/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── TrainCard.jsx        # Картка потяга
+│   │   ├── TrainCard.module.css # Стилі для картки
+│   │   ├── TrainList.jsx        # Список потягів
+│   │   ├── TrainList.module.css # Стилі для списку
+│   │   ├── SearchBar.jsx        # Панель пошуку та фільтрації
+│   │   └── SearchBar.module.css # Стилі для панелі пошуку
+│   ├── data/
+│   │   └── trains.js            # Файл з даними про потяги
+│   ├── pages/
+│   │   ├── Home.jsx             # Головна сторінка
+│   │   └── Home.module.css      # Стилі для головної сторінки
+│   ├── App.jsx                  # Основний компонент
+│   ├── main.jsx                 # Точка входу
+│   └── index.css                # Глобальні стилі та CSS змінні
+├── index.html
+├── package.json
+└── README.md
+```
+
+## 🚀 Встановлення та запуск
+
+Для запуску проєкту локально виконайте наступні кроки:
+
+1. **Перейдіть у папку проєкту**:
+   ```bash
+   cd LB9
+   ```
+
+2. **Встановіть залежності**:
+   ```bash
+   npm install
+   ```
+
+3. **Запустіть сервер для розробки**:
+   ```bash
+   npm run dev
+   ```
+
+Відкрийте посилання [http://localhost:5173](http://localhost:5173) у вашому браузері.
+
+---
+**Виконав**: студент 2 курсу Яремчук Сергій
+**Дисципліна**: Програмування на стороні клієнта
